@@ -1,4 +1,5 @@
 import express from "express";
+import User from "../models/User";
 
 const router = express.Router();
 
@@ -13,6 +14,12 @@ router.get("/customers", (req, res) => {
     { id: 2, firstName: "Alicia", lastName: "Wangari" }
   ];
   res.json(customers);
+});
+
+router.get("/users", (req, res) => {
+  User.find({}).then(users => {
+    res.json(users);
+  });
 });
 
 export default router;

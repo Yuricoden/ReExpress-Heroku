@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Users from "./components/users/users";
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ class App extends Component {
             ? "Fetching message from API"
             : this.state.message}
         </p>
+        <Users />
       </div>
     );
   }
