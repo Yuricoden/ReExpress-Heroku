@@ -8,7 +8,7 @@
   "scripts": {
     "dev-start": "nodemon --exec babel-node -- ./server/index.js",
     "start": "babel-node server",
-    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd react-ui/ && yarn && yarn install && yarn run build"
   },
   "cacheDirectories": [
     "node_modules",
@@ -17,9 +17,7 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "express": "^4.14.1"
-  },
-  "devDependencies": {
+    "express": "^4.14.1",
     "babel-eslint": "^8.1.2",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^15.1.0",
@@ -31,6 +29,7 @@
     "nodemon": "^1.14.7",
     "prettier": "^1.9.2"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dotBerry245/ReExpress-Heroku.git"
