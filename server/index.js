@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // mongodb connection
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URL, { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, "../react-ui/build")));
