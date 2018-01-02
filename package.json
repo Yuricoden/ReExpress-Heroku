@@ -1,0 +1,32 @@
+{
+  "name": "reexpress-heroku",
+  "version": "1.0.0",
+  "description": "create-react-app with a custom Node server on Heroku",
+  "engines": {
+    "node": "6.11.x"
+  },
+  "scripts": {
+    "start": "node server",
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotBerry245/ReExpress-Heroku.git"
+  },
+  "author": "dotBerry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dotBerry245/ReExpress-Heroku/issues"
+  },
+  "homepage": "https://github.com/dotBerry245/ReExpress-Heroku#readme"
+}
